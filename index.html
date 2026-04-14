@@ -3,35 +3,31 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hongkong Seeking International Trading Co.,Ltd - 3C Digital Accessories & Automation Sheet Metal Production Line</title>
-<meta name="description" content="Hongkong Seeking international trading Co.,Ltd specializes in 3C digital accessories and automation sheet metal production line equipment." />
-<meta name="keywords" content="Seeking Trading,3C Digital Accessories,Chargers,Automation Sheet Metal" />
+<title>Hongkong Seeking International Trading Co.,Ltd</title>
 <style>
 * {margin: 0;padding: 0;box-sizing: border-box;font-family: 'Microsoft YaHei', Arial, sans-serif;}
 body {line-height: 1.6;color: #333;background: #f5f7fa;}
 header {background: #1a237e;color: #fff;padding: 1rem 2rem;position: sticky;top: 0;z-index: 999;box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
 .container {max-width: 1200px;margin: 0 auto;padding: 0 1rem;}
 .header-wrap {display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;gap: 1rem;}
-.logo {font-size: 1.6rem;font-weight: bold;letter-spacing: 1px;}
-.lang-switch {display: flex;gap: 0.5rem;align-items: center;}
-.lang-btn {background: transparent;border: 1px solid rgba(255,255,255,0.5);color: #fff;padding: 0.4rem 0.8rem;border-radius: 4px;cursor: pointer;font-size: 0.9rem;transition: all 0.3s;}
-.lang-btn:hover, .lang-btn.active {background: #ffd700;color: #1a237e;border-color: #ffd700;}
+.logo {font-size: 1.6rem;font-weight: bold;}
+.lang-switch {display: flex;gap: 0.5rem;}
+.lang-btn {background: transparent;border: 1px solid rgba(255,255,255,0.5);color: #fff;padding: 0.4rem 0.8rem;border-radius: 4px;cursor: pointer;}
+.lang-btn:hover, .lang-btn.active {background: #ffd700;color: #1a237e;}
 nav {display: flex;gap: 1.5rem;}
-nav a {color: #fff;text-decoration: none;font-size: 1rem;transition: color 0.3s;}
+nav a {color: #fff;text-decoration: none;}
 nav a:hover {color: #ffd700;}
 .banner {background: linear-gradient(rgba(26,35,126,0.8), rgba(26,35,126,0.8)), url('https://picsum.photos/1920/600') no-repeat center/cover;color: #fff;padding: 6rem 2rem;text-align: center;}
 .banner h1 {font-size: 2.8rem;margin-bottom: 1.2rem;}
 .banner p {max-width: 800px;margin: 0 auto 2.5rem;font-size: 1.2rem;}
-.contact-btn {display: inline-block;background: #ffd700;color: #1a237e;padding: 1rem 2.5rem;border-radius: 50px;text-decoration: none;font-weight: bold;font-size: 1.1rem;transition: all 0.3s;}
-.contact-btn:hover {background: #fff;transform: translateY(-3px);}
+.contact-btn {display: inline-block;background: #ffd700;color: #1a237e;padding: 1rem 2.5rem;border-radius: 50px;text-decoration: none;font-weight: bold;}
 .section {padding: 5rem 0;}
 .section-title {text-align: center;font-size: 2.2rem;color: #1a237e;margin-bottom: 3rem;position: relative;}
 .section-title::after {content: '';width: 80px;height: 3px;background: #ffd700;position: absolute;bottom: -10px;left: 50%;transform: translateX(-50%);}
 .about-content {max-width: 900px;margin: 0 auto;text-align: center;font-size: 1.1rem;line-height: 1.8;color: #555;}
 .product-bg {background: #fff;}
 .product-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));gap: 2rem;}
-.product-card {background: #f9fafc;border-radius: 10px;padding: 2rem;box-shadow: 0 3px 15px rgba(0,0,0,0.05);transition: transform 0.3s;}
-.product-card:hover {transform: translateY(-5px);}
+.product-card {background: #f9fafc;border-radius: 10px;padding: 2rem;box-shadow: 0 3px 15px rgba(0,0,0,0.05);}
 .product-card h3 {font-size: 1.4rem;color: #1a237e;margin-bottom: 1rem;border-left: 4px solid #ffd700;padding-left: 10px;}
 .product-card p {color: #666;line-height: 1.7;}
 .contact-wrap {display: flex;flex-wrap: wrap;gap: 3rem;justify-content: center;}
@@ -39,16 +35,62 @@ nav a:hover {color: #ffd700;}
 .contact-info p {font-size: 1.1rem;margin-bottom: 1.2rem;color: #333;}
 .contact-info strong {color: #1a237e;margin-right: 8px;}
 footer {background: #1a237e;color: #fff;text-align: center;padding: 2.5rem 1rem;}
-footer p {font-size: 1rem;opacity: 0.9;}
-/* RTL Support for Arabic */
+/* Welcome/Register Page */
+.welcome-page {min-height: 100vh;background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 2rem;}
+.welcome-page h1 {color: #fff;font-size: 3rem;margin-bottom: 1rem;text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
+.welcome-page .subtitle {color: #ffd700;font-size: 1.5rem;margin-bottom: 3rem;}
+.reg-options {display: flex;flex-wrap: wrap;gap: 1.5rem;justify-content: center;max-width: 900px;}
+.reg-btn {background: #fff;color: #1a237e;padding: 2rem 3rem;border-radius: 15px;font-size: 1.3rem;font-weight: bold;cursor: pointer;border: none;transition: all 0.3s;box-shadow: 0 4px 15px rgba(0,0,0,0.2);min-width: 220px;}
+.reg-btn:hover {transform: translateY(-5px);box-shadow: 0 8px 25px rgba(0,0,0,0.3);background: #ffd700;}
+.reg-btn .icon {font-size: 2rem;display: block;margin-bottom: 0.5rem;}
+.reg-form {background: #fff;padding: 2.5rem;border-radius: 15px;max-width: 450px;width: 100%;box-shadow: 0 10px 40px rgba(0,0,0,0.3);}
+.reg-form h2 {color: #1a237e;margin-bottom: 1.5rem;text-align: center;}
+.reg-form input {width: 100%;padding: 1rem;margin-bottom: 1rem;border: 2px solid #ddd;border-radius: 8px;font-size: 1rem;}
+.reg-form input:focus {border-color: #1a237e;outline: none;}
+.reg-form button {width: 100%;padding: 1rem;background: #1a237e;color: #fff;border: none;border-radius: 8px;font-size: 1.1rem;font-weight: bold;cursor: pointer;}
+.reg-form button:hover {background: #3949ab;}
+.back-btn {background: transparent;color: #666;border: 2px solid #ddd;padding: 0.8rem 2rem;border-radius: 8px;cursor: pointer;margin-top: 1rem;}
+.hidden {display: none !important;}
+/* RTL */
 [dir="rtl"] {text-align: right;}
 [dir="rtl"] .header-wrap {flex-direction: row-reverse;}
 [dir="rtl"] nav {flex-direction: row-reverse;}
 [dir="rtl"] .product-card h3 {border-left: none;border-right: 4px solid #ffd700;padding-left: 0;padding-right: 10px;}
-@media (max-width:768px) {.banner h1 {font-size: 2rem;}.header-wrap {flex-direction: column;gap: 1rem;}nav a {margin: 0 0.5rem;}}
+@media (max-width:768px) {.banner h1 {font-size: 2rem;}.header-wrap {flex-direction: column;}.welcome-page h1 {font-size: 2rem;}.reg-btn {min-width: 180px;padding: 1.5rem;}}
 </style>
 </head>
 <body>
+<!-- Welcome / Registration Page -->
+<div id="welcomePage" class="welcome-page">
+<h1 data-en="Hello, my friends!" data-zh="你好，我的朋友们！" data-ar="مرحباً يا أصدقائي!">Hello, my friends!</h1>
+<p class="subtitle" data-en="Welcome to Seeking International Trading" data-zh="欢迎来到Seekin国际贸易" data-ar="مرحباً بك في سيكينغ للتجارة الدولية">Welcome to Seeking International Trading</p>
+<div class="reg-options">
+<button class="reg-btn" onclick="showRegForm('buyer')">
+<span class="icon">🛒</span>
+<span data-en="Buyer Register" data-zh="采购商注册" data-ar="تسجيل المشتري">Buyer Register</span>
+</button>
+<button class="reg-btn" onclick="showRegForm('factory')">
+<span class="icon">🏭</span>
+<span data-en="Factory Register" data-zh="工厂注册" data-ar="تسجيل المصنع">Factory Register</span>
+</button>
+<button class="reg-btn" onclick="showRegForm('forwarder')">
+<span class="icon">🚢</span>
+<span data-en="Freight Forwarder" data-zh="货代注册" data-ar="تسجيل الشحن">Freight Forwarder</span>
+</button>
+</div>
+</div>
+<!-- Registration Form -->
+<div id="regForm" class="reg-form hidden">
+<h2 id="formTitle">Registration</h2>
+<input type="text" id="regName" placeholder="Company Name / 公司名称 / اسم الشركة" required>
+<input type="email" id="regEmail" placeholder="Email / 邮箱 / البريد الإلكتروني" required>
+<input type="tel" id="regPhone" placeholder="Phone / 电话 / الهاتف" required>
+<input type="text" id="regCountry" placeholder="Country / 国家 / الدولة" required>
+<button onclick="submitReg()" data-en="Register" data-zh="注册" data-ar="تسجيل">Register</button>
+<button class="back-btn" onclick="backToWelcome()" data-en="Back" data-zh="返回" data-ar="عودة">Back</button>
+</div>
+<!-- Main Website -->
+<div id="mainSite">
 <header>
 <div class="container header-wrap">
 <div class="logo">Seeking International Trading</div>
@@ -62,13 +104,14 @@ footer p {font-size: 1rem;opacity: 0.9;}
 <a href="#about" data-en="About Us" data-zh="关于我们" data-ar="من نحن">About Us</a>
 <a href="#products" data-en="Products" data-zh="产品中心" data-ar="المنتجات">Products</a>
 <a href="#contact" data-en="Contact Us" data-zh="联系我们" data-ar="اتصل بنا">Contact Us</a>
+<button onclick="logout()" style="background:#ffd700;color:#1a237e;padding:0.4rem 0.8rem;border-radius:4px;border:none;cursor:pointer;margin-left:1rem;" data-en="Logout" data-zh="退出" data-ar="خروج">Logout</button>
 </nav>
 </div>
 </header>
 <section class="banner" id="home">
 <div class="container">
 <h1 data-en="Hongkong Seeking International Trading Co.,Ltd" data-zh="香港Seekin国际贸易有限公司" data-ar="شركة هونغ كونغ سيكينغ للتجارة الدولية المحدودة">Hongkong Seeking International Trading Co.,Ltd</h1>
-<p data-en="Professional Supplier of 3C Digital Accessories & Automation Sheet Metal Production Line Equipment" data-zh="专业供应3C数码配件及自动化钣金生产线设备" data-ar="مورد احترافي لإكسسوارات الرقمية 3C ومعدات خطوط إنتاج الصفائح المعدنية الآلية">Professional Supplier of 3C Digital Accessories & Automation Sheet Metal Production Line Equipment</p>
+<p data-en="Professional Supplier of 3C Digital Accessories & Automation Sheet Metal Production Line Equipment" data-zh="专业供应3C数码配件及自动化钣金生产线设备" data-ar="مورد احترافي لإكسسوارات رقمية 3C">Professional Supplier of 3C Digital Accessories & Automation Sheet Metal Production Line Equipment</p>
 <a href="#contact" class="contact-btn" data-en="Inquiry Now" data-zh="立即询价" data-ar="استفسر الآن">Inquiry Now</a>
 </div>
 </section>
@@ -76,11 +119,9 @@ footer p {font-size: 1rem;opacity: 0.9;}
 <div class="container">
 <h2 class="section-title" data-en="About Us" data-zh="关于我们" data-ar="من نحن">About Us</h2>
 <div class="about-content">
-<p data-en="Hongkong Seeking international trading Co.,Ltd is a professional international trading company, committed to providing global customers with high-quality industrial and electronic products." data-zh="香港Seekin国际贸易有限公司是一家专业的国际贸易公司，致力于为全球客户提供优质的工业和电子产品。" data-ar="شركة هونغ كونغ سيكينغ للتجارة الدولية المحدودة هي شركة تجارية دولية متخصصة في تقديم منتجات صنائية وإلكترونية عالية الجودة للعملاء في جميع أنحاء العالم.">Hongkong Seeking international trading Co.,Ltd is a professional international trading company, committed to providing global customers with high-quality industrial and electronic products.</p>
+<p data-en="Hongkong Seeking international trading Co.,Ltd is a professional international trading company." data-zh="香港Seekin国际贸易有限公司是一家专业的国际贸易公司。" data-ar="شركة هونغ كونغ سيكينغ للتجارة الدولية المحدودة شركة تجارية دولية متخصصة.">Hongkong Seeking international trading Co.,Ltd is a professional international trading company.</p>
 <br>
-<p data-en="We focus on two core businesses: 3C digital accessories (including chargers, charging cables) and automation sheet metal production line equipment, covering CNC bending center, CNC laser cutting machine, CNC welding platform, handheld welding machine and other automated production equipment." data-zh="我们专注于两大核心业务：3C数码配件（包括充电器、充电线）和自动化钣金生产线设备，涵盖数控折弯中心、数控激光切割机、数控焊接平台、手持焊接机等自动化生产设备。" data-ar="نركز على نشاطين رئيسيين: إكسسوارات رقمية 3C (بما في ذلك الشواحن وكابلات الشحن) ومعدات خطوط إنتاج الصفائح المعدنية الآلية، بما في ذلك مركز الثني CNC، ماكينة القطع بالليزر CNC، منصة اللحام CNC، وماكينة اللحام المحمولة.">We focus on two core businesses: 3C digital accessories (including chargers, charging cables) and automation sheet metal production line equipment.</p>
-<br>
-<p data-en="With reliable product quality, competitive price and professional after-sales service, we have established long-term stable cooperative relations with customers at home and abroad." data-zh="凭借可靠的产品质量、有竞争力的价格和专业的售后服务，我们与国内外客户建立了长期稳定的合作关系。" data-ar="من خلال جودة المنتج الموثوقة والأسعار التنافسية وخدمة ما بعد البيع المهنية، أنشأنا علاقات تعاونية مستقرة طويلة الأمد مع العملاء في الداخل والخارج.">With reliable product quality, competitive price and professional after-sales service, we have established long-term stable cooperative relations with customers at home and abroad.</p>
+<p data-en="We focus on 3C digital accessories and automation sheet metal production line equipment." data-zh="我们专注于3C数码配件和自动化钣金生产线设备。" data-ar="نركز على إكسسوارات رقمية 3C ومعدات خطوط إنتاج الصفائح المعدنية الآلية.">We focus on 3C digital accessories and automation sheet metal production line equipment.</p>
 </div>
 </div>
 </section>
@@ -88,18 +129,8 @@ footer p {font-size: 1rem;opacity: 0.9;}
 <div class="container">
 <h2 class="section-title" data-en="Our Products" data-zh="产品中心" data-ar="منتجاتنا">Our Products</h2>
 <div class="product-grid">
-<div class="product-card">
-<h3 data-en="3C Digital Accessories" data-zh="3C数码配件" data-ar="إكسسوارات رقمية 3C">3C Digital Accessories</h3>
-<p data-en="Various specifications of chargers, data charging cables, mobile phone accessories, tablet accessories with stable performance, safe and durable, supporting customized services." data-zh="各种规格的充电器、数据充电线、手机配件、平板电脑配件，性能稳定、安全耐用，支持定制服务。" data-ar="مواصفات مختلفة من الشواحن وكابلات البيانات وشواحن الهاتف المحمول وإكسسوارات الأجهزة اللوحية مع أداء مستقر وآمن ومتين، تدعم الخدمات المخصصة.">Various specifications of chargers, data charging cables, mobile phone accessories, tablet accessories with stable performance.</p>
-</div>
-<div class="product-card">
-<h3 data-en="Automation Sheet Metal Equipment" data-zh="自动化钣金设备" data-ar="معدات الصفائح المعدنية الآلية">Automation Sheet Metal Equipment</h3>
-<p data-en="CNC bending center, high-precision CNC laser cutting machine, CNC welding platform, handheld welding machine and other sheet metal production automation equipment." data-zh="数控折弯中心、高精度数控激光切割机、数控焊接平台、手持焊接机等钣金生产自动化设备。" data-ar="مركز الثني CNC، ماكينة القطع بالليزر CNC عالية الدقة، منصة اللحام CNC، ماكينة اللحام المحمولة ومعدات أتمتة إنتاج الصفائح المعدنية الأخرى.">CNC bending center, high-precision CNC laser cutting machine, CNC welding platform, handheld welding machine.</p>
-</div>
-<div class="product-card">
-<h3 data-en="Product Advantage" data-zh="产品优势" data-ar="مميزات المنتج">Product Advantage</h3>
-<p data-en="Advanced production technology, high precision, high efficiency, energy saving, widely used in electronics, hardware, machinery manufacturing industries." data-zh="先进的生产技术、高精度、高效率、节能，广泛应用于电子、五金、机械制造行业。" data-ar="تكنولوجيا الإنتاج المتقدمة، دقة عالية، كفاءة عالية، توفير الطاقة، تستخدم على نطاق واسع في صناعات الإلكترونيات والأجهزة المعدنية وتصنيع الآلات.">Advanced production technology, high precision, high efficiency, energy saving, widely used in electronics, hardware, machinery manufacturing.</p>
-</div>
+<div class="product-card"><h3 data-en="3C Digital Accessories" data-zh="3C数码配件" data-ar="إكسسوارات رقمية 3C">3C Digital Accessories</h3><p data-en="Chargers, data cables, phone accessories with stable performance." data-zh="充电器、数据线、手机配件，性能稳定。" data-ar="شواحن وكابلات بيانات وهواتف ثابتة الأداء.">Chargers, data cables, phone accessories with stable performance.</p></div>
+<div class="product-card"><h3 data-en="Automation Equipment" data-zh="自动化设备" data-ar="معدات آلية">Automation Equipment</h3><p data-en="CNC bending center, laser cutting, welding equipment." data-zh="数控折弯中心、激光切割、焊接设备。" data-ar="مركز الثني CNC والقطع بالليزر ومعدات اللحام.">CNC bending center, laser cutting, welding equipment.</p></div>
 </div>
 </div>
 </section>
@@ -108,35 +139,69 @@ footer p {font-size: 1rem;opacity: 0.9;}
 <h2 class="section-title" data-en="Contact Us" data-zh="联系我们" data-ar="اتصل بنا">Contact Us</h2>
 <div class="contact-wrap">
 <div class="contact-info">
-<p><strong data-en="Company Name:" data-zh="公司名称：" data-ar="اسم الشركة:">Company Name:</strong> <span data-en="Hongkong Seeking International Trading Co.,Ltd" data-zh="香港Seekin国际贸易有限公司" data-ar="شركة هونغ كونغ سيكينغ للتجارة الدولية المحدودة">Hongkong Seeking International Trading Co.,Ltd</span></p>
 <p><strong>Email 1:</strong> Seekingxports@gmail.com</p>
 <p><strong>Email 2:</strong> Seekingxports@outlook.com</p>
-<p><strong data-en="Tel 1:" data-zh="电话 1：" data-ar="الهاتف 1:">Tel 1:</strong> +86 13147131230</p>
-<p><strong data-en="Tel 2:" data-zh="电话 2：" data-ar="الهاتف 2:">Tel 2:</strong> +86 19515132150</p>
-<p><strong data-en="Business Scope:" data-zh="业务范围：" data-ar="نطاق الأعمال:">Business Scope:</strong> <span data-en="3C Digital Accessories, Automation Sheet Metal Production Line Equipment" data-zh="3C数码配件、自动化钣金生产线设备" data-ar="إكسسوارات رقمية 3C ومعدات خطوط إنتاج الصفائح المعدنية الآلية">3C Digital Accessories, Automation Sheet Metal Production Line Equipment</span></p>
+<p><strong>Tel 1:</strong> +86 13147131230</p>
+<p><strong>Tel 2:</strong> +86 19515132150</p>
 </div>
 </div>
 </div>
 </section>
-<footer>
-<div class="container">
-<p>&copy; 2026 Hongkong Seeking International Trading Co.,Ltd. All Rights Reserved.</p>
+<footer><div class="container"><p>&copy; 2026 Hongkong Seeking International Trading Co.,Ltd. All Rights Reserved.</p></div></footer>
 </div>
-</footer>
 <script>
-function setLang(lang) {
-  document.getElementById('html-root').lang = lang;
-  document.getElementById('html-root').dir = (lang === 'ar') ? 'rtl' : 'ltr';
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-  document.querySelectorAll(`.lang-btn[onclick="setLang('${lang}')"]`)[0].classList.add('active');
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const text = el.getAttribute(`data-${lang}`);
-    if (text) el.textContent = text;
-  });
-  localStorage.setItem('seeking-lang', lang);
+var currentRegType = '';
+function showRegForm(type) {
+currentRegType = type;
+var titles = {buyer:{en:'Buyer Registration',zh:'采购商注册',ar:'تسجيل المشتري'},factory:{en:'Factory Registration',zh:'工厂注册',ar:'تسجيل المصنع'},forwarder:{en:'Freight Forwarder Registration',zh:'货代注册',ar:'تسجيل شركة الشحن'}};
+document.getElementById('welcomePage').classList.add('hidden');
+document.getElementById('regForm').classList.remove('hidden');
+document.getElementById('formTitle').textContent = titles[type][localStorage.getItem('seeking-lang')||'en'];
 }
-const savedLang = localStorage.getItem('seeking-lang') || 'en';
+function backToWelcome() {
+document.getElementById('regForm').classList.add('hidden');
+document.getElementById('welcomePage').classList.remove('hidden');
+}
+function submitReg() {
+var name=document.getElementById('regName').value;
+var email=document.getElementById('regEmail').value;
+var phone=document.getElementById('regPhone').value;
+var country=document.getElementById('regCountry').value;
+if(!name||!email) {alert('Please fill in required fields');return;}
+var regData={type:currentRegType,name:name,email:email,phone:phone,country:country,time:new Date().toISOString()};
+localStorage.setItem('seeking_user',JSON.stringify(regData));
+document.getElementById('regForm').classList.add('hidden');
+document.getElementById('mainSite').classList.remove('hidden');
+}
+function logout() {
+localStorage.removeItem('seeking_user');
+showWelcomePage();
+}
+function showWelcomePage() {
+document.getElementById('welcomePage').classList.remove('hidden');
+document.getElementById('mainSite').classList.add('hidden');
+}
+function setLang(lang) {
+document.getElementById('html-root').lang = lang;
+document.getElementById('html-root').dir = (lang === 'ar') ? 'rtl' : 'ltr';
+document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+document.querySelectorAll('.lang-btn[onclick="setLang(\''+lang+'\')"]')[0].classList.add('active');
+document.querySelectorAll('[data-en]').forEach(el => {
+var text = el.getAttribute('data-'+lang);
+if (text) el.textContent = text;
+});
+localStorage.setItem('seeking-lang', lang);
+}
+// Init
+var savedLang = localStorage.getItem('seeking-lang') || 'en';
 setLang(savedLang);
+var user = localStorage.getItem('seeking_user');
+if(user) {
+document.getElementById('welcomePage').classList.add('hidden');
+document.getElementById('mainSite').classList.remove('hidden');
+} else {
+showWelcomePage();
+}
 </script>
 </body>
 </html>
