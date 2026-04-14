@@ -36,7 +36,9 @@ nav a:hover {color: #ffd700;}
 .contact-info strong {color: #1a237e;margin-right: 8px;}
 footer {background: #1a237e;color: #fff;text-align: center;padding: 2.5rem 1rem;}
 /* Welcome/Register Page */
-.welcome-page {min-height: 100vh;background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 2rem;}
+.welcome-page {min-height: 100vh;background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 2rem;position:relative;}
+.welcome-lang-switch {position:absolute;top:1.5rem;right:1.5rem;display:flex;gap:0.5rem;}
+[dir="rtl"] .welcome-lang-switch {right:auto;left:1.5rem;}
 .welcome-page h1 {color: #fff;font-size: 3rem;margin-bottom: 1rem;text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
 .welcome-page .subtitle {color: #ffd700;font-size: 1.5rem;margin-bottom: 3rem;}
 .reg-options {display: flex;flex-wrap: wrap;gap: 1.5rem;justify-content: center;max-width: 900px;}
@@ -62,7 +64,12 @@ footer {background: #1a237e;color: #fff;text-align: center;padding: 2.5rem 1rem;
 <body>
 <!-- Welcome / Registration Page -->
 <div id="welcomePage" class="welcome-page">
-<h1 data-en="Hello, my friends!" data-zh="你好，我的朋友们！" data-ar="مرحباً يا أصدقائي!">Hello, my friends!</h1>
+<div class="welcome-lang-switch" style="position:absolute;top:1.5rem;right:1.5rem;">
+<button class="lang-btn" onclick="setLang('en')">English</button>
+<button class="lang-btn" onclick="setLang('zh')">中文</button>
+<button class="lang-btn" onclick="setLang('ar')">العربية</button>
+</div>
+<h1>Hello, my friends!</h1>
 <p class="subtitle" data-en="Welcome to Seeking International Trading" data-zh="欢迎来到Seekin国际贸易" data-ar="مرحباً بك في سيكينغ للتجارة الدولية">Welcome to Seeking International Trading</p>
 <div class="reg-options">
 <button class="reg-btn" onclick="showRegForm('buyer')">
