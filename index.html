@@ -36,9 +36,20 @@ nav a:hover {color: #ffd700;}
 .contact-info strong {color: #1a237e;margin-right: 8px;}
 footer {background: #1a237e;color: #fff;text-align: center;padding: 2.5rem 1rem;}
 /* Welcome/Register Page */
-.welcome-page {min-height: 100vh;background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 2rem;position:relative;}
+.welcome-page {min-height: 100vh;background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);display: flex;flex-direction: column;padding: 2rem;position:relative;}
+.welcome-content {display: flex;flex: 1;align-items: center;justify-content: center;gap: 4rem;max-width: 1200px;margin: 0 auto;width: 100%;}
+.welcome-left {flex: 1;text-align: center;padding: 2rem;}
+.welcome-logo {max-width: 350px;width: 100%;height: auto;border-radius: 15px;box-shadow: 0 8px 30px rgba(0,0,0,0.3);background:#fff;padding:15px;}
+.welcome-left h1 {color: #fff;font-size: 2.5rem;margin: 1.5rem 0 0.5rem;text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
+.welcome-left .subtitle {color: #ffd700;font-size: 1.3rem;}
+.welcome-right {flex: 1;display: flex;flex-direction: column;align-items: center;}
 .welcome-lang-switch {position:absolute;top:1.5rem;right:1.5rem;display:flex;gap:0.5rem;}
 [dir="rtl"] .welcome-lang-switch {right:auto;left:1.5rem;}
+[dir="rtl"] .welcome-content {flex-direction: row-reverse;}
+[dir="rtl"] .guest-browse {left:auto;right:50%;transform:translateX(50%);}
+.guest-browse {position: absolute;bottom: 2rem;left: 50%;transform: translateX(-50%);}
+.guest-btn {background: transparent;border: 2px solid #ffd700;color: #ffd700;padding: 0.8rem 2.5rem;border-radius: 30px;font-size: 1rem;cursor: pointer;transition: all 0.3s;}
+.guest-btn:hover {background: #ffd700;color: #1a237e;}
 /* WhatsApp Floating Button */
 .whatsapp-float {position:fixed;bottom:30px;right:30px;z-index:1000;}
 .whatsapp-btn {display:block;width:60px;height:60px;background:#25d366;border-radius:50%;box-shadow:0 4px 15px rgba(0,0,0,0.3);transition:transform 0.3s;}
@@ -67,20 +78,24 @@ footer {background: #1a237e;color: #fff;text-align: center;padding: 2.5rem 1rem;
 [dir="rtl"] .header-wrap {flex-direction: row-reverse;}
 [dir="rtl"] nav {flex-direction: row-reverse;}
 [dir="rtl"] .product-card h3 {border-left: none;border-right: 4px solid #ffd700;padding-left: 0;padding-right: 10px;}
-@media (max-width:768px) {.banner h1 {font-size: 2rem;}.header-wrap {flex-direction: column;}.welcome-page h1 {font-size: 2rem;}.reg-btn {min-width: 180px;padding: 1.5rem;}}
+@media (max-width:768px) {.banner h1 {font-size: 2rem;}.header-wrap {flex-direction: column;}.welcome-page h1 {font-size: 2rem;}.reg-btn {min-width: 180px;padding: 1.5rem;}.welcome-content {flex-direction: column;gap: 2rem;}.welcome-logo {max-width: 250px;}}
 </style>
 </head>
 <body>
 <!-- Welcome / Registration Page -->
 <div id="welcomePage" class="welcome-page">
-<div class="welcome-lang-switch" style="position:absolute;top:1.5rem;right:1.5rem;">
+<div class="welcome-lang-switch">
 <button class="lang-btn" onclick="setLang('en')">English</button>
 <button class="lang-btn" onclick="setLang('zh')">中文</button>
 <button class="lang-btn" onclick="setLang('ar')">العربية</button>
 </div>
+<div class="welcome-content">
+<div class="welcome-left">
+<img src="Seeking-LOGO.jpg" alt="Seeking Logo" class="welcome-logo">
 <h1>Hello, my friends!</h1>
 <p class="subtitle" data-en="Welcome to Seeking International Trading" data-zh="欢迎来到Seekin国际贸易" data-ar="مرحباً بك في سيكينغ للتجارة الدولية">Welcome to Seeking International Trading</p>
-<div class="reg-options">
+</div>
+<div class="welcome-right" id="regOptions">
 <button class="reg-btn" onclick="showRegForm('buyer')">
 <span class="icon">🛒</span>
 <span data-en="Buyer Register" data-zh="采购商注册" data-ar="تسجيل المشتري">Buyer Register</span>
@@ -93,6 +108,10 @@ footer {background: #1a237e;color: #fff;text-align: center;padding: 2.5rem 1rem;
 <span class="icon">🚢</span>
 <span data-en="Freight Forwarder" data-zh="货代注册" data-ar="تسجيل الشحن">Freight Forwarder</span>
 </button>
+</div>
+</div>
+<div class="guest-browse">
+<button class="guest-btn" onclick="guestBrowse()" data-en="Browse as Guest >" data-zh="游客浏览 >" data-ar="تصفح كزائر >">Browse as Guest ></button>
 </div>
 </div>
 <!-- Registration Form -->
@@ -202,6 +221,10 @@ document.getElementById('mainSite').classList.remove('hidden');
 function logout() {
 localStorage.removeItem('seeking_user');
 showWelcomePage();
+}
+function guestBrowse() {
+document.getElementById('welcomePage').classList.add('hidden');
+document.getElementById('mainSite').classList.remove('hidden');
 }
 function showWelcomePage() {
 document.getElementById('welcomePage').classList.remove('hidden');
