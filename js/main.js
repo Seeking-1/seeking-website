@@ -25,15 +25,40 @@ const CONFIG = {
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 移动端菜单切换
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const langSwitcher = document.querySelector('.lang-switcher');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            langSwitcher.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // 点击菜单项后关闭菜单
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                langSwitcher.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
     // 平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const offsetTop = target.offsetTop - 70; // 考虑固定导航栏高度
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
                 });
             }
         });

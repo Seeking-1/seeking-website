@@ -1,5 +1,6 @@
 /* ========================================
    Seeking Website - 创意活力风格
+   优化移动端适配
    ======================================== */
 
 /* 基础变量 */
@@ -24,6 +25,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -88,6 +93,36 @@ body {
     50% { transform: translateY(-10px); }
 }
 
+/* 汉堡菜单按钮 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -136,6 +171,7 @@ body {
     border-radius: 25px;
     cursor: pointer;
     transition: var(--transition);
+    font-size: 14px;
 }
 
 .lang-btn:hover,
@@ -163,6 +199,7 @@ body {
     color: white;
     z-index: 2;
     animation: fadeInUp 1s ease-out;
+    padding: 0 20px;
 }
 
 .hero h1 {
@@ -570,39 +607,446 @@ body {
 }
 
 /* ========================================
-   响应式设计
+   响应式设计 - 平板
    ======================================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo-icon {
+        font-size: 28px;
+    }
+
     .nav-menu {
-        display: none;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
-    
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats {
-        flex-direction: column;
         gap: 20px;
     }
-    
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .products h2,
+    .about h2,
+    .contact h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        gap: 40px;
+    }
+
+    .stats {
+        gap: 30px;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+}
+
+/* ========================================
+   响应式设计 - 手机
+   ======================================== */
+@media (max-width: 768px) {
+    /* 导航栏移动端样式 */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--bg-white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu a {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+
+    .lang-switcher {
+        position: fixed;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1001;
+        background: var(--bg-white);
+        padding: 15px;
+        border-radius: 30px;
+        box-shadow: var(--shadow-md);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+    }
+
+    .lang-switcher.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* 首页横幅移动端 */
+    .hero {
+        padding-top: 70px;
+        min-height: 100vh;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .cta-button {
+        padding: 15px 40px;
+        font-size: 1rem;
+    }
+
+    .floating-box {
+        font-size: 50px;
+        opacity: 0.2;
+    }
+
+    /* 产品中心移动端 */
+    .products {
+        padding: 60px 0;
+    }
+
+    .products h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .product-card {
+        padding: 30px 20px;
+    }
+
+    .product-icon {
+        font-size: 50px;
+    }
+
+    .product-card h3 {
+        font-size: 1.3rem;
+    }
+
+    /* 关于我们移动端 */
+    .about {
+        padding: 60px 0;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .stats {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        flex: 1;
+        min-width: 80px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .placeholder-image {
+        padding: 40px 20px;
+        order: -1;
+    }
+
+    .placeholder-image i {
+        font-size: 60px;
+    }
+
+    /* 联系我们移动端 */
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info {
+        padding: 30px 20px;
+    }
+
+    .info-item {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .info-item i {
+        font-size: 20px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 16px; /* 防止iOS自动缩放 */
+    }
+
+    .submit-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    /* 页脚移动端 */
+    .footer {
+        padding: 40px 0 20px;
+    }
+
     .footer-content {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
         text-align: center;
     }
-    
+
+    .footer-brand {
+        font-size: 20px;
+    }
+
     .footer-links {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 0.95rem;
+    }
+
+    .footer-social {
+        gap: 15px;
+    }
+
+    .footer-social a {
+        font-size: 22px;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+        padding-top: 20px;
+    }
+}
+
+/* ========================================
+   响应式设计 - 小屏手机
+   ======================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .logo-icon {
+        font-size: 24px;
+    }
+
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+
+    .products h2,
+    .about h2,
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .product-card {
+        padding: 25px 15px;
+    }
+
+    .contact-form {
+        padding: 25px 15px;
+    }
+}
+
+/* ========================================
+   触摸优化
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* 增加触摸目标大小 */
+    .nav-menu a,
+    .lang-btn,
+    .cta-button,
+    .submit-btn,
+    .footer-links a,
+    .footer-social a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* 移除hover效果，改用active */
+    .product-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .product-card:active {
+        transform: scale(0.98);
+    }
+
+    .cta-button:hover {
+        transform: none;
+    }
+
+    .cta-button:active {
+        transform: scale(0.95);
+    }
+
+    .submit-btn:hover {
+        transform: none;
+    }
+
+    .submit-btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* ========================================
+   横屏优化
+   ======================================== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .floating-box {
+        font-size: 40px;
+    }
+}
+
+/* ========================================
+   高分辨率屏幕优化
+   ======================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* ========================================
+   打印样式
+   ======================================== */
+@media print {
+    .navbar,
+    .hero-decoration,
+    .lang-switcher,
+    .menu-toggle {
+        display: none;
+    }
+
+    .hero {
+        background: white;
+        color: black;
+        padding-top: 0;
+    }
+
+    .hero h1,
+    .hero p {
+        color: black;
     }
 }
